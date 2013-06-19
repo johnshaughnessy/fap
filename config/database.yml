@@ -1,20 +1,23 @@
 development:
   adapter: postgresql
-  database: john_database_development
+  encoding: utf8
+  database: project_development
   pool: 5
-  timeout: 5000
-  host: localhost
+  username: 
+  password:
 
-test:
+test: &TEST
   adapter: postgresql
-  database: john_database_test
+  encoding: utf8
+  database: project_test
   pool: 5
-  timeout: 5000
-  host: localhost
+  username: 
+  password:
 
 production:
   adapter: postgresql
-  database: john_database_production
+  encoding: utf8
+  database: project_production
   pool: 5
-  timeout: 5000
-  host: localhost
+  username: 
+  password:
