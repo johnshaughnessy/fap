@@ -1,0 +1,11 @@
+
+%h3 About this blog
+%p This is a blog-to-be by John, who fills it with thoughts and other useless things.
+
+- if @similar_posts
+  %h4= "More Posts With Category: #{@similar_posts.first.category}"
+  - @similar_posts.each do |post|
+    .link
+      = link_to "#{post.title}", post_path(post)
+
+

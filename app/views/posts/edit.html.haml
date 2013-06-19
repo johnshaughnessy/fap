@@ -1,0 +1,8 @@
+%h3 Edit Post
+
+= form_for @post, :html => {:class => "form-vertical"} do |f|
+  = f.text_field :title, :placeholder => @post.title
+  = f.text_field :category, :placeholder => @post.category
+  = f.text_area :body, :placeholder => @post.body 
+  = f.submit "Update Post", :class => "btn btn-primary"
+  

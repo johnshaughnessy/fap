@@ -1,0 +1,6 @@
+%h3= @post.title
+.btn-group
+  = link_to "Edit", edit_post_path, :class => "btn", :method => :put
+  .btn Delete
+%p= @post.body
+

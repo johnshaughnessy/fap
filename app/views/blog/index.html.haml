@@ -1,0 +1,15 @@
+%h2 Faun and Pheonix
+
+- if @posts.blank?
+  %h4 No posts.
+- else
+  - posts_with_preview = 0
+  - @posts.each do |post|
+    - if post.published
+      %h3
+        = link_to post.title, post, method: :show
+      - if posts_with_preview < 5
+        %p= "#{post.body[0..1000]}..."
+        - posts_with_preview += 1
+
+

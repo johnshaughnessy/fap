@@ -1,0 +1,19 @@
+!!!
+%head
+  %title Faun and Pheonix
+  = stylesheet_link_tag "application", :media => "all"
+.hero-unit
+  %body
+    =render 'shared/navbar'
+    .container
+      .row
+        .span9 
+          =yield
+        .span3
+          -begin
+            =render 'sidebar'
+          -rescue Exception
+            =render 'shared/sidebar'
+
+
+      

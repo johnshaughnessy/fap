@@ -1,0 +1,5 @@
+= form_for @post, :html => {:class => "form-vertical"} do |f|
+  = f.text_field :title, :placeholder => 'Title'
+  = f.text_field :category, :placeholder => 'Category'
+  = f.text_area :body, :placeholder => 'Body' 
+  = f.submit "Create Post", :class => "btn btn-primary"
